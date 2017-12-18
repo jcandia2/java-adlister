@@ -1,5 +1,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ include file="./partials/navbar.jsp" %>
+<%@ include file="./partials/custom.css" %>
+
+
+
 <html>
 <head>
     <title><%= "some title" %></title>
