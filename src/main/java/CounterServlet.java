@@ -5,10 +5,13 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
-@WebServlet(name = "HelloWorldServlet", urlPatterns = "/hello")
-public class HelloWorldServlet extends HttpServlet {
+@WebServlet(name = "CounterServlet", urlPatterns = "/count")
+public class CounterServlet extends HttpServlet {
+    private int counter =0;
+
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
-        res.getWriter().println("<h1>Hello World!</h1>");
+        counter += 1;
+        res.getWriter().println("<h1>The count is " + counter + ".</h1>");
 
     }
 }
