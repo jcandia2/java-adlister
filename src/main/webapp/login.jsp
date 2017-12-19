@@ -10,7 +10,7 @@
 <body>
 <%@ include file="partials/navbar.jsp" %>
 
-    <c:if test="${param.username == 'admin' && param.password == 'password'}">
+    <c:if test="${param.username.equalsIgnoreCase('admin') && param.password == 'password'}">
         <c:redirect url = "/profile.jsp"/>
     </c:if>
         <p>"username": ${param.username}</p>
