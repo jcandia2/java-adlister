@@ -10,12 +10,25 @@
 <%@ include file="./partials/custom.css" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Log <In></In></title>
 </head>
 <body>
 
-username: <input type="text">
-password: <input type="text">
+    <h1>Log In</h1>
+    <form action="/login.jsp" method="POST">
+        <div>
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text">
+        </div>
+        <div>
+
+        <label for="password">Password</label>
+            <input id="password" name="password" type="password">
+        </div>
+
+        <input type="submit" value="Log In">
+    </form>
+</div>
 
 
 </body>
