@@ -5,16 +5,18 @@
 
 <html>
 <head>
-    <title><%= "some title" %></title>
-    <%@ include file="partials/head.jsp" %>
+    <jsp:include page="partials/head.jsp">
+        <jsp:param name="title" value="Welcome" />
+    </jsp:include>
 
 </head>
 <body>
 <%@ include file="./partials/navbar.jsp" %>
 <h1>Welcome, please log in.</h1>
 <form action="/login.jsp">
-    <input type="submit" value="Go to Login">
+    <input type="submit" class="btn btn-primary" value="Go to Login">
 </form>
+
 
 </body>
 </html>

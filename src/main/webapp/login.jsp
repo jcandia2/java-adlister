@@ -4,29 +4,27 @@
 <html>
 <head>
     <title>Log In</title>
-    <%@ include file="partials/head.jsp" %>
+    <jsp:include page="partials/head.jsp">
+        <jsp:param name="title" value="Please Log In"/>
+    </jsp:include>
 
 </head>
 <body>
-<%@ include file="partials/navbar.jsp" %>
 
 
 <%--using expression language--%>
-    <%--<c:if test="${param.username.equalsIgnoreCase('admin') && param.password == 'password'}">--%>
-        <%--<c:redirect url = "/profile.jsp"/>--%>
-    <%--</c:if>--%>
-        <%--<p>"username": ${param.username}</p>--%>
-        <%--<p>"password": ${param.password}</p>--%>
+<%--<c:if test="${param.username.equalsIgnoreCase('admin') && param.password == 'password'}">--%>
+<%--<c:redirect url = "/profile.jsp"/>--%>
+<%--</c:if>--%>
+<%--<p>"username": ${param.username}</p>--%>
+<%--<p>"password": ${param.password}</p>--%>
 
 <%
-    String username = request.getParameter("username");
-    String password = request.getParameter("password");
-
-    if(request.getMethod().equalsIgnoreCase("post")) {
-        if(username.equalsIgnoreCase("admin") && password.equals("password")) {
+    if (request.getMethod().equalsIgnoreCase("post")) {
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        if (username.equalsIgnoreCase("admin") && password.equals("password")) {
             response.sendRedirect("/profile.jsp");
-        } else {
-            response.sendRedirect("/login.jsp");
         }
     }
 %>
