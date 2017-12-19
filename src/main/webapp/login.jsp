@@ -10,11 +10,26 @@
 <body>
 <%@ include file="partials/navbar.jsp" %>
 
-    <c:if test="${param.username.equalsIgnoreCase('admin') && param.password == 'password'}">
-        <c:redirect url = "/profile.jsp"/>
-    </c:if>
-        <p>"username": ${param.username}</p>
-        <p>"password": ${param.password}</p>
+
+<%--using expression language--%>
+    <%--<c:if test="${param.username.equalsIgnoreCase('admin') && param.password == 'password'}">--%>
+        <%--<c:redirect url = "/profile.jsp"/>--%>
+    <%--</c:if>--%>
+        <%--<p>"username": ${param.username}</p>--%>
+        <%--<p>"password": ${param.password}</p>--%>
+
+<%
+    String username = request.getParameter("username");
+    String password = request.getParameter("password");
+
+    if(request.getMethod().equalsIgnoreCase("post")) {
+        if(username.equalsIgnoreCase("admin") && password.equals("password")) {
+            response.sendRedirect("/profile.jsp");
+        } else {
+            response.sendRedirect("/login.jsp");
+        }
+    }
+%>
 
 <h1>Log In</h1>
 <form action="/login.jsp" method="POST">

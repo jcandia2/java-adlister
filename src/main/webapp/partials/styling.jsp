@@ -1,22 +1,16 @@
 <%--
   Created by IntelliJ IDEA.
   User: juan
-  Date: 12/18/17
-  Time: 4:52 PM
+  Date: 12/19/17
+  Time: 11:58 AM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
-
 <html>
 <head>
-    <title>Profile Page</title>
-    <%@ include file="partials/head.jsp" %>
-
+    <title>$Title$</title>
 </head>
 <body>
-<%@ include file="partials/navbar.jsp" %>
-<h1>Viewing Your Profile Page</h1>
-
+$END$
 </body>
 </html>

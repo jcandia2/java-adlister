@@ -11,11 +11,10 @@
 </head>
 <body>
 <%@ include file="./partials/navbar.jsp" %>
-    <c:if test="true">
-        <h1>Variable names should be very descriptive</h1>
-    </c:if>
-    <c:if test="false">
-        <h1>single letter variable names are good</h1>
-    </c:if>
+<h1>Welcome, please log in.</h1>
+<form action="/login.jsp">
+    <input type="submit" value="Go to Login">
+</form>
+
 </body>
 </html>
